@@ -1,20 +1,23 @@
-# Agent Trajectories
+# Agent trajectories
 
-Challenge requires disclosing coding agents and submitting trajectories.
+**Quality bar:** [`docs/TRAJECTORY_STANDARD.md`](../docs/TRAJECTORY_STANDARD.md)  
+**Template:** [`_TEMPLATE.md`](./_TEMPLATE.md)  
+**Owner:** Grok drafts every trace to senior-engineer standard; Zaheer approves.
 
-## How we capture (every session)
-1. Goal / prompt given to agent
-2. Tools / actions the agent took
-3. Feedback (errors, test results, human notes)
-4. Retries / human checkpoints
-5. Final outcome of that session
+## How we operate
+1. Session start → note goal on [`docs/SESSION_CARD.md`](../docs/SESSION_CARD.md)
+2. Build with agent(s)
+3. Zaheer says **`trace close karo`**
+4. Grok writes a submission-ready trace + changelog link
+5. Index row added below
 
-## Naming
-```
-traces/YYYY-MM-DD_HHMM_<short-title>.md
-```
+## Agents used (update as needed)
+| Agent | Role |
+|-------|------|
+| Grok (xAI) | Primary — architecture, code, traces |
+| _(backup)_ | Optional |
 
-## Agents log
-| Date | Agent | Session file | Purpose |
-|------|-------|--------------|---------|
-| 2026-08-28 | Grok (xAI) | `2026-08-28_pre-kickoff-setup.md` | War-room setup |
+## Index (newest first)
+| When | Phase | File | Goal |
+|------|-------|------|------|
+| 2026-08-28 | polish | `2026-08-28_trajectory-standard-lock.md` | Lock senior trajectory SOP + ownership |
