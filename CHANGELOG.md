@@ -18,6 +18,14 @@ Every meaningful iteration goes here, linked to evidence (tests, metrics, traces
 
 ## Entries
 
+### [2026-08-29] — Phase 0: freeze Problem #2 (bug-fix agent)
+- **From → To:** open problem choice → locked bug-fix / PR agent scope
+- **Why:** need a falsifiable user bottleneck and comparable metric before building sample apps
+- **Change:** README rewrite; primary metric = eval-case success rate (tests green); PDF copied to `docs/problem-statement.pdf`; kickoff trace
+- **Evidence:** `traces/2026-08-29_1400_kickoff-phase0-freeze.md`, `README.md`
+- **Result:** Phase 0 complete — ready for Phase 1 sample world
+- **Next:** build tiny broken app + pytest + 5–10 eval cases
+
 ### [2026-08-28] — Remove practice-only traces
 - **From → To:** practice traces present → cleaned
 - **Why:** those files were format drills, not submission evidence

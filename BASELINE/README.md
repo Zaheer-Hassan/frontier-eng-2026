@@ -1,30 +1,16 @@
-# Baseline solution
+# Baseline solution — Bug-fix agent
 
-**Goal:** Simplest correct, runnable solution that meets the core problem requirements.
+**Intent:** Fair, simple way to attempt fixes **before** the advanced edit–verify loop.
 
-Fill after kickoff PDF.
+## Planned approach (Phase 2)
+- Single-shot (or minimal) fix prompt given failing test output, **or**
+- One-pass agent without a structured retry budget
 
-## Intended behavior
-- …
+## Metric
+Same as root README: **eval-case success rate** (suite green), plus time-to-green / iterations when solved.
+
+## Status
+Phase 0 freeze only — implementation starts after Phase 1 sample apps exist.
 
 ## How to run
-See root [`REPRO.md`](../REPRO.md) — Baseline section.
-
-```bash
-# exact commands after implementation
-```
-
-## What this does NOT try to solve
-- Keep this list honest — advanced will improve these gaps.
-
-## Known limitations / failure modes
-- …
-
-## Tests
-```bash
-# pytest / npm test / etc.
-```
-
-## Agent notes
-- Primary agent used to build baseline: …
-- Trace files: `traces/YYYY-MM-DD_*baseline*.md`
+See root [`REPRO.md`](../REPRO.md) once implemented.

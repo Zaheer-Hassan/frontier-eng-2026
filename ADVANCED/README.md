@@ -1,34 +1,22 @@
-# Advanced solution
+# Advanced solution — Bug-fix agent
 
-**Goal:** Meaningful improvement over baseline — capability, reliability, efficiency, coverage, or engineering quality (not cosmetic).
-
-Fill after baseline works and is measured.
+**Intent:** Meaningful improvement over baseline via a real agent loop.
 
 ## Improvement thesis
-One sentence: “Advanced is better because …”
+Advanced beats baseline because it **plans, patches minimally, re-runs tests, and retries under budget** instead of hoping a single generation is correct.
 
 ## Measured delta vs baseline
 | Metric | Baseline | Advanced | Delta |
 |--------|----------|----------|-------|
-| e.g. pass rate | | | |
-| e.g. latency | | | |
-| e.g. error rate | | | |
+| Success rate (cases green) | TBD | TBD | TBD |
+| Median time-to-green (solved) | TBD | TBD | TBD |
+| Median iterations (solved) | TBD | TBD | TBD |
 
-## What changed (high level)
-- …
-- …
+## Planned loop (Phase 3)
+`observe failure → select files → edit → run tests → verify → retry or stop`
+
+## Status
+Phase 0 freeze only — implement after baseline numbers exist.
 
 ## How to run
-See root [`REPRO.md`](../REPRO.md) — Advanced section.
-
-```bash
-# exact commands after implementation
-```
-
-## Evidence
-- Changelog entries: …
-- Traces: …
-- Tests / benchmarks: …
-
-## Failure mode still remaining
-- …
+See root [`REPRO.md`](../REPRO.md) once implemented.
