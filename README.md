@@ -63,8 +63,15 @@ Eval protocol: same cases for baseline and advanced; ≥5 cases including ≥1 h
 
 | Track | Path | Intent |
 |-------|------|--------|
-| **Baseline** | `BASELINE/` | One-pass heuristic script — **37.5% (3/8)** recorded |
-| **Advanced** | `ADVANCED/` | Plan → edit → test → verify → retry budget (Phase 3) |
+| **Baseline** | `BASELINE/` | One-pass heuristic script — **37.5% (3/8)** |
+| **Advanced** | `ADVANCED/` | Plan → edit → verify → retry — **100% (8/8)** (**+62.5 pp**) |
+
+### Headline metric
+| | Success rate |
+|--|--|
+| Pre-agent sample world | 0% (0/8) |
+| Baseline | 37.5% (3/8) |
+| Advanced | **100% (8/8)** |
 
 ## Agents used
 
@@ -91,7 +98,8 @@ See [`video/SCRIPT.md`](./video/SCRIPT.md) — ≤ 5 minutes.
 
 ## Hot take / main failure mode
 
-_(filled before submit)_
+**Failure mode:** a one-pass fixer looks productive on shallow bugs and then silently plateaus — retries without new skills waste budget.  
+**Hot take:** agent reliability comes less from “more generations” and more from **explicit skills + verify gates + honest stop conditions**.
 
 ## Task board
 

@@ -18,6 +18,15 @@ Every meaningful iteration goes here, linked to evidence (tests, metrics, traces
 
 ## Entries
 
+### [2026-08-29] — Phase 3: advanced agent 100% (+62.5pp)
+- **From → To:** baseline 37.5% (3/8) → advanced **100% (8/8)**
+- **Why:** need a real plan/edit/verify/retry loop and semantic repair skills
+- **Change:** `ADVANCED/agent.py`, `strategies.py`, metrics + per-case trajectories
+- **Evidence:** `ADVANCED/results/advanced_metrics.json`; `traces/2026-08-29_1500_phase3-advanced.md`
+- **Result:** Hard password case fixed; +62.5 percentage points vs baseline
+- **Removed experiment:** looping baseline heuristics alone — no new capability, rejected
+- **Next:** Phase 4 proof pack (write-up, video script, trajectory audit)
+
 ### [2026-08-29] — Phase 2: baseline one-pass fixer @ 37.5%
 - **From → To:** 0% pre-agent world → baseline success_rate 37.5% (3/8)
 - **Why:** need a fair weak reference before building the advanced retry agent

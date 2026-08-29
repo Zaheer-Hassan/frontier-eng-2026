@@ -1,0 +1,38 @@
+{
+  "id": "05_slugify",
+  "ok": true,
+  "iterations": 1,
+  "seconds": 0.479,
+  "strategies_used": [
+    "slugify_lower"
+  ],
+  "trajectory": [
+    {
+      "step": 0,
+      "action": "observe",
+      "tool": "pytest",
+      "ok": false,
+      "pytest_tail": "\ntest_app.py:17: AssertionError\n=========================== short test summary info ============================\nFAILED test_app.py::test_basic - AssertionError: assert 'Hello-World' == 'hel...\nFAILED test_app.py::test_punctuation - AssertionError: assert 'Hello-World' =...\nFAILED test_app.py::test_trims_edges - AssertionError: assert 'Already-Slug' ...\nFAILED test_app.py::test_numbers_ok - AssertionError: assert 'Top-10-Tips' ==...\n4 failed in 0.03s"
+    },
+    {
+      "step": 1,
+      "action": "plan",
+      "strategy": "slugify_lower",
+      "rationale": "selected_by_signal_overlap_among_unused_strategies"
+    },
+    {
+      "step": 1,
+      "action": "edit",
+      "tool": "write:app.py",
+      "strategy": "slugify_lower",
+      "ok": true
+    },
+    {
+      "step": 1,
+      "action": "verify",
+      "tool": "pytest",
+      "ok": true,
+      "pytest_tail": "....                                                                     [100%]\n4 passed in 0.01s"
+    }
+  ]
+}

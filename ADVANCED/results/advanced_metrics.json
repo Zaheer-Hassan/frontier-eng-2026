@@ -1,0 +1,85 @@
+{
+  "approach": "advanced_plan_edit_verify_retry",
+  "max_retries": 5,
+  "passed": 8,
+  "total": 8,
+  "success_rate": 1.0,
+  "median_iterations_solved": 1,
+  "median_seconds_solved": 0.477,
+  "baseline_success_rate": 0.375,
+  "improvement_pp": 0.625,
+  "results": [
+    {
+      "id": "01_sum_inclusive",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.548,
+      "strategies_used": [
+        "while_lt_to_le"
+      ]
+    },
+    {
+      "id": "02_word_reverse",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.483,
+      "strategies_used": [
+        "reverse_words"
+      ]
+    },
+    {
+      "id": "03_discount",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.472,
+      "strategies_used": [
+        "discount_percent"
+      ]
+    },
+    {
+      "id": "04_dedupe_order",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.467,
+      "strategies_used": [
+        "dedupe_dict_order"
+      ]
+    },
+    {
+      "id": "05_slugify",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.479,
+      "strategies_used": [
+        "slugify_lower"
+      ]
+    },
+    {
+      "id": "06_queue_fifo",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.471,
+      "strategies_used": [
+        "queue_pop0"
+      ]
+    },
+    {
+      "id": "07_merge_sorted",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.477,
+      "strategies_used": [
+        "sorted_drop_reverse"
+      ]
+    },
+    {
+      "id": "08_password_rules",
+      "ok": true,
+      "iterations": 1,
+      "seconds": 0.477,
+      "strategies_used": [
+        "password_policy"
+      ]
+    }
+  ]
+}

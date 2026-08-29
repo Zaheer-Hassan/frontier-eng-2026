@@ -1,22 +1,38 @@
-# Advanced solution — Bug-fix agent
-
-**Intent:** Meaningful improvement over baseline via a real agent loop.
+# Advanced — plan → edit → verify → retry agent
 
 ## Improvement thesis
-Advanced beats baseline because it **plans, patches minimally, re-runs tests, and retries under budget** instead of hoping a single generation is correct.
+Advanced beats baseline because it runs a real **agent loop**: observe pytest failures, **plan** which unused repair skill to apply, **edit** `app.py`, **verify**, and **retry** under budget — instead of a single shallow heuristic pass.
 
 ## Measured delta vs baseline
+
 | Metric | Baseline | Advanced | Delta |
 |--------|----------|----------|-------|
-| Success rate (cases green) | **37.50% (3/8)** | TBD Phase 3 | TBD |
-| Median time-to-green (solved) | ~0.48s | TBD | TBD |
-| Median iterations (solved) | 1 | TBD | TBD |
+| Success rate (cases green) | **37.50% (3/8)** | **100% (8/8)** | **+62.5 pp** |
+| Median iterations (solved) | 1 | 1 | — |
+| Median seconds (solved) | ~0.48s | ~0.5s | — |
+| Hard case `08_password_rules` | FAIL | **PASS** | fixed |
 
-## Planned loop (Phase 3)
-`observe failure → select files → edit → run tests → verify → retry or stop`
+Evidence:
+- `../BASELINE/results/baseline_metrics.json`
+- `results/advanced_metrics.json`
+- Per-case tool trajectories: `trajectories/*.json`
 
-## Status
-Phase 0 freeze only — implement after baseline numbers exist.
+## Loop
+```text
+observe (pytest)
+  → plan (rank unused strategies by failure/source signals)
+  → edit (apply one strategy)
+  → verify (pytest)
+  → retry until green or budget exhausted (max 5)
+```
 
 ## How to run
-See root [`REPRO.md`](../REPRO.md) once implemented.
+```bash
+python ADVANCED/agent.py
+python ADVANCED/agent.py --case 08_password_rules
+```
+
+## Design notes
+- Strategies live in `strategies.py` as named skills (not one giant prompt).
+- Work copies strip `meta.json` spoilers.
+- No API key required for this advanced path; optional LLM oneshot remains in `BASELINE/agent_llm_oneshot.py` for comparison experiments.

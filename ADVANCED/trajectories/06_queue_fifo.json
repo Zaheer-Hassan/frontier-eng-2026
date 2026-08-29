@@ -1,0 +1,38 @@
+{
+  "id": "06_queue_fifo",
+  "ok": true,
+  "iterations": 1,
+  "seconds": 0.471,
+  "strategies_used": [
+    "queue_pop0"
+  ],
+  "trajectory": [
+    {
+      "step": 0,
+      "action": "observe",
+      "tool": "pytest",
+      "ok": false,
+      "pytest_tail": "E         \nE         - a\nE         + c\n\ntest_app.py:11: AssertionError\n=========================== short test summary info ============================\nFAILED test_app.py::test_fifo_order - AssertionError: assert 'c' == 'a'\n1 failed, 2 passed in 0.03s"
+    },
+    {
+      "step": 1,
+      "action": "plan",
+      "strategy": "queue_pop0",
+      "rationale": "selected_by_signal_overlap_among_unused_strategies"
+    },
+    {
+      "step": 1,
+      "action": "edit",
+      "tool": "write:app.py",
+      "strategy": "queue_pop0",
+      "ok": true
+    },
+    {
+      "step": 1,
+      "action": "verify",
+      "tool": "pytest",
+      "ok": true,
+      "pytest_tail": "...                                                                      [100%]\n3 passed in 0.01s"
+    }
+  ]
+}

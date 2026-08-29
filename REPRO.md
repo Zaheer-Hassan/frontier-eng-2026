@@ -45,16 +45,25 @@ Artifact: `BASELINE/results/baseline_metrics.json`
 
 ## Run advanced
 ```bash
-# filled in Phase 3
+python ADVANCED/agent.py
+# single case:
+# python ADVANCED/agent.py --case 08_password_rules
 ```
 
-**Expected output:** _(Phase 3)_
+**Expected output:**  
+`advanced success_rate=100.00% (8/8) delta_vs_baseline=+62.50%`  
+Artifacts: `ADVANCED/results/advanced_metrics.json`, `ADVANCED/trajectories/*.json`
 
 ## Run evaluation / comparison
 ```bash
-# filled when agents exist — same cases for baseline vs advanced
-python sample_world/run_all.py --json
+python BASELINE/fix_once.py
+python ADVANCED/agent.py
+
+# pristine world still red before fixes:
+python sample_world/run_all.py
 ```
+
+**Expected comparison:** baseline **37.5%** vs advanced **100%** on the same 8 cases.
 
 ## Data required
 - Synthetic cases under `sample_world/cases/` only (no private data)

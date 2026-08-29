@@ -1,0 +1,38 @@
+{
+  "id": "03_discount",
+  "ok": true,
+  "iterations": 1,
+  "seconds": 0.472,
+  "strategies_used": [
+    "discount_percent"
+  ],
+  "trajectory": [
+    {
+      "step": 0,
+      "action": "observe",
+      "tool": "pytest",
+      "ok": false,
+      "pytest_tail": ">       assert apply_discount(50.0, 100.0) == 0.0\nE       assert -50.0 == 0.0\nE        +  where -50.0 = apply_discount(50.0, 100.0)\n\ntest_app.py:15: AssertionError\n=========================== short test summary info ============================\nFAILED test_app.py::test_full_discount - assert -50.0 == 0.0\n1 failed, 3 passed in 0.03s"
+    },
+    {
+      "step": 1,
+      "action": "plan",
+      "strategy": "discount_percent",
+      "rationale": "selected_by_signal_overlap_among_unused_strategies"
+    },
+    {
+      "step": 1,
+      "action": "edit",
+      "tool": "write:app.py",
+      "strategy": "discount_percent",
+      "ok": true
+    },
+    {
+      "step": 1,
+      "action": "verify",
+      "tool": "pytest",
+      "ok": true,
+      "pytest_tail": "....                                                                     [100%]\n4 passed in 0.01s"
+    }
+  ]
+}

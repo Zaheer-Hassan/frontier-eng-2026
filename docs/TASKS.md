@@ -28,13 +28,13 @@
 
 
 ## Phase 3 — Advanced agent
-14. [ ] Advanced design: plan → edit → run tests → verify → retry budget
-15. [ ] Implement agent (Python recommended) + tools (read/edit/shell/test)
-16. [ ] Human checkpoint / sandbox rules where needed
-17. [ ] Run advanced on same eval cases
-18. [ ] Metric table: baseline vs advanced (measurable delta)
-19. [ ] `ADVANCED/` + changelog + trajectories (incl. one failed experiment)
-20. [ ] Commit + push
+14. [x] Advanced design: plan → edit → run tests → verify → retry budget
+15. [x] Implement agent + tools (`agent.py`, `strategies.py`, pytest tool)
+16. [x] Sandbox: work copies only; strip spoilers; no prod side effects
+17. [x] Run advanced on same eval cases → **100% (8/8)**
+18. [x] Metric delta vs baseline: **+62.5 pp**
+19. [x] Trajectories in `ADVANCED/trajectories/` + phase trace (failed experiment noted)
+20. [x] Commit + push
 
 ## Phase 4 — Proof pack
 21. [ ] Complete `REPRO.md` (clean machine: baseline + advanced + eval)
