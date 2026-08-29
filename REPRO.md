@@ -34,10 +34,14 @@ Case catalog: [`sample_world/EVAL_CASES.md`](./sample_world/EVAL_CASES.md)
 
 ## Run baseline
 ```bash
-# filled in Phase 2
+python BASELINE/fix_once.py
+# optional LLM oneshot (needs API key in .env):
+# python BASELINE/agent_llm_oneshot.py
 ```
 
-**Expected output:** _(Phase 2)_
+**Expected output (heuristic baseline):**  
+`baseline success_rate=37.50% (3/8)`  
+Artifact: `BASELINE/results/baseline_metrics.json`
 
 ## Run advanced
 ```bash

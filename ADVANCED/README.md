@@ -8,9 +8,9 @@ Advanced beats baseline because it **plans, patches minimally, re-runs tests, an
 ## Measured delta vs baseline
 | Metric | Baseline | Advanced | Delta |
 |--------|----------|----------|-------|
-| Success rate (cases green) | TBD | TBD | TBD |
-| Median time-to-green (solved) | TBD | TBD | TBD |
-| Median iterations (solved) | TBD | TBD | TBD |
+| Success rate (cases green) | **37.50% (3/8)** | TBD Phase 3 | TBD |
+| Median time-to-green (solved) | ~0.48s | TBD | TBD |
+| Median iterations (solved) | 1 | TBD | TBD |
 
 ## Planned loop (Phase 3)
 `observe failure → select files → edit → run tests → verify → retry or stop`

@@ -19,6 +19,7 @@
 ## Index (newest first)
 | When | Phase | File | Goal |
 |------|-------|------|------|
+| 2026-08-29 | baseline | `2026-08-29_1430_phase2-baseline.md` | One-pass baseline scored at 37.5% |
 | 2026-08-29 | sample-world | `2026-08-29_1410_phase1-sample-world.md` | Build 8 failing eval cases + harness |
 | 2026-08-29 | kickoff | `2026-08-29_1400_kickoff-phase0-freeze.md` | Freeze Problem #2 + metric + scope |
 | 2026-08-28 | polish | `2026-08-28_trajectory-standard-lock.md` | Lock senior trajectory SOP + ownership |

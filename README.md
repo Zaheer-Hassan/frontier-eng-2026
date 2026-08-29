@@ -63,8 +63,8 @@ Eval protocol: same cases for baseline and advanced; ≥5 cases including ≥1 h
 
 | Track | Path | Intent |
 |-------|------|--------|
-| **Baseline** | `BASELINE/` | Fair simple approach (e.g. single-shot LLM fix or minimal loop) |
-| **Advanced** | `ADVANCED/` | Plan → edit → test → verify → retry budget + better tooling |
+| **Baseline** | `BASELINE/` | One-pass heuristic script — **37.5% (3/8)** recorded |
+| **Advanced** | `ADVANCED/` | Plan → edit → test → verify → retry budget (Phase 3) |
 
 ## Agents used
 

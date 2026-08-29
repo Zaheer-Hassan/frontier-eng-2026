@@ -33,6 +33,10 @@ coverage/
 tmp/
 .cache/
 
+# Agent workspaces (regenerated each run)
+BASELINE/work/
+ADVANCED/work/
+
 # Large local artifacts (keep scripts, not huge binaries unless needed)
 video/*.mp4
 !video/.gitkeep

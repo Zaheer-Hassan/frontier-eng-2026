@@ -20,11 +20,12 @@
 9. [x] Verified pre-agent `success_rate=0.00%` (0/8)
 
 ## Phase 2 — Baseline
-9. [ ] Baseline approach: single prompt OR minimal agent / manual-script equivalent
-10. [ ] Run baseline on all eval cases
-11. [ ] Record baseline metrics table
-12. [ ] `BASELINE/` code + README + changelog + trajectory
-13. [ ] Commit + push (senior message)
+9. [x] Baseline approach: one-pass heuristic script (+ optional LLM oneshot)
+10. [x] Run baseline on all eval cases → **37.50% (3/8)**
+11. [x] Record baseline metrics (`BASELINE/results/baseline_metrics.json`)
+12. [x] `BASELINE/` code + README + changelog + trajectory
+13. [x] Commit + push (senior message)
+
 
 ## Phase 3 — Advanced agent
 14. [ ] Advanced design: plan → edit → run tests → verify → retry budget

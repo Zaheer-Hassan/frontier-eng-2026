@@ -18,6 +18,14 @@ Every meaningful iteration goes here, linked to evidence (tests, metrics, traces
 
 ## Entries
 
+### [2026-08-29] — Phase 2: baseline one-pass fixer @ 37.5%
+- **From → To:** 0% pre-agent world → baseline success_rate 37.5% (3/8)
+- **Why:** need a fair weak reference before building the advanced retry agent
+- **Change:** `BASELINE/fix_once.py`, optional `agent_llm_oneshot.py`, metrics JSON, README/REPRO
+- **Evidence:** `BASELINE/results/baseline_metrics.json`; `traces/2026-08-29_1430_phase2-baseline.md`
+- **Result:** Solved 01/06/07 via shallow heuristics; semantic bugs remain failing
+- **Next:** Phase 3 advanced agent with plan/edit/test/retry to beat 37.5%
+
 ### [2026-08-29] — Phase 1: sample world + 8 eval cases
 - **From → To:** no eval world → 8 failing synthetic cases + harness
 - **Why:** need a fixed case set to measure baseline vs advanced success rate
