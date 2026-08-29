@@ -37,11 +37,11 @@
 20. [x] Commit + push
 
 ## Phase 4 — Proof pack
-21. [ ] Complete `REPRO.md` (clean machine: baseline + advanced + eval)
-22. [ ] README write-up: approach, failures, hot take
-23. [ ] Trajectory audit (senior standard)
-24. [ ] Video script ≤5 min; Zaheer records
-25. [ ] Secrets check; public/private repo ready for judges
+21. [x] Complete `REPRO.md` (clean machine: baseline + advanced + eval)
+22. [x] Write-up: `docs/WRITEUP.md` + README approach/hot take
+23. [x] Trajectory audit PASS (`docs/TRAJECTORY_AUDIT.md`)
+24. [x] Video script ready (`video/SCRIPT.md`) — Zaheer records MP4 at submit time
+25. [x] Secrets check OK (no `.env` / no key literals in git)
 
 ## Phase 5 — Submit
 26. [ ] Final pack checklist

@@ -82,7 +82,7 @@ Eval protocol: same cases for baseline and advanced; ≥5 cases including ≥1 h
 
 ## How to reproduce
 
-See [`REPRO.md`](./REPRO.md) (filled as implementation lands).
+See [`REPRO.md`](./REPRO.md) — clean-machine commands for pristine world, baseline, and advanced.
 
 ## Improvement history
 
@@ -96,14 +96,26 @@ See [`traces/`](./traces/) — written to [`docs/TRAJECTORY_STANDARD.md`](./docs
 
 See [`video/SCRIPT.md`](./video/SCRIPT.md) — ≤ 5 minutes.
 
+## Approach (short)
+See full write-up: [`docs/WRITEUP.md`](./docs/WRITEUP.md)
+
+1. Fixed synthetic eval world (8 pytest cases)  
+2. Weak one-pass baseline → **37.5%**  
+3. Plan/edit/verify/retry agent → **100% (+62.5 pp)**  
+
 ## Hot take / main failure mode
 
 **Failure mode:** a one-pass fixer looks productive on shallow bugs and then silently plateaus — retries without new skills waste budget.  
 **Hot take:** agent reliability comes less from “more generations” and more from **explicit skills + verify gates + honest stop conditions**.
 
-## Task board
-
-[`docs/TASKS.md`](./docs/TASKS.md)
+## Proof pack
+| Doc | Path |
+|-----|------|
+| Reproduction | [`REPRO.md`](./REPRO.md) |
+| Write-up | [`docs/WRITEUP.md`](./docs/WRITEUP.md) |
+| Video script | [`video/SCRIPT.md`](./video/SCRIPT.md) |
+| Trajectory audit | [`docs/TRAJECTORY_AUDIT.md`](./docs/TRAJECTORY_AUDIT.md) |
+| Tasks | [`docs/TASKS.md`](./docs/TASKS.md) |
 
 ---
 

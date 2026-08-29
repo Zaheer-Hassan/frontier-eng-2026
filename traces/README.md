@@ -19,6 +19,7 @@
 ## Index (newest first)
 | When | Phase | File | Goal |
 |------|-------|------|------|
+| 2026-08-29 | polish | `2026-08-29_1530_phase4-proof-pack.md` | REPRO/write-up/video script/audit |
 | 2026-08-29 | advanced | `2026-08-29_1500_phase3-advanced.md` | Advanced agent 100% (+62.5pp vs baseline) |
 | 2026-08-29 | baseline | `2026-08-29_1430_phase2-baseline.md` | One-pass baseline scored at 37.5% |
 | 2026-08-29 | sample-world | `2026-08-29_1410_phase1-sample-world.md` | Build 8 failing eval cases + harness |

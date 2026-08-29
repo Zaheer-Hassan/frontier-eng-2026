@@ -3,9 +3,12 @@
 Written for a judge starting from a **clean machine**.
 
 ## Prerequisites
-- OS: macOS / Linux / Windows (WSL OK)
-- Python **3.9+**
-- Git
+| Item | Version / note |
+|------|----------------|
+| OS | macOS / Linux / Windows (WSL OK) |
+| Python | **3.9+** (developed on 3.9.6) |
+| Git | any recent |
+| Network | not required for baseline/advanced heuristic agents |
 
 ## Clone
 ```bash
@@ -16,67 +19,72 @@ cd frontier-eng-2026
 ## Environment
 ```bash
 python -m pip install -r sample_world/requirements.txt
-# Later phases may add agent requirements — see BASELINE/ and ADVANCED/ when present
+# pins: pytest>=7,<9  (verified with pytest 8.4.2)
 ```
 
-## Sample world (eval cases)
+Optional LLM oneshot baseline only:
 ```bash
-# all cases — expect ~0% success before agents fix them
-python sample_world/run_all.py
+cp .env.example .env
+# set OPENROUTER_API_KEY or OPENAI_API_KEY or XAI_API_KEY
+# never commit .env
+```
 
-# one case
+## 1) Pristine sample world (before fixes)
+```bash
+python sample_world/run_all.py
+```
+**Expected:** `success_rate=0.00% (0/8)`  
+Catalog: [`sample_world/EVAL_CASES.md`](./sample_world/EVAL_CASES.md)
+
+One case:
+```bash
 python sample_world/run_case.py 01_sum_inclusive
+# exit code 1, pytest failures
 ```
 
-**Expected (Phase 1, unbroken apps):** `success_rate=0%` (8/8 failing).
-
-Case catalog: [`sample_world/EVAL_CASES.md`](./sample_world/EVAL_CASES.md)
-
-## Run baseline
+## 2) Baseline
 ```bash
 python BASELINE/fix_once.py
-# optional LLM oneshot (needs API key in .env):
-# python BASELINE/agent_llm_oneshot.py
+```
+**Expected:** `baseline success_rate=37.50% (3/8)`  
+**Solved:** `01_sum_inclusive`, `06_queue_fifo`, `07_merge_sorted`  
+**Artifact:** `BASELINE/results/baseline_metrics.json`  
+**Runtime:** ~2–4 seconds total on a laptop
+
+Optional:
+```bash
+python BASELINE/agent_llm_oneshot.py
 ```
 
-**Expected output (heuristic baseline):**  
-`baseline success_rate=37.50% (3/8)`  
-Artifact: `BASELINE/results/baseline_metrics.json`
-
-## Run advanced
+## 3) Advanced
 ```bash
 python ADVANCED/agent.py
-# single case:
-# python ADVANCED/agent.py --case 08_password_rules
 ```
+**Expected:** `advanced success_rate=100.00% (8/8) delta_vs_baseline=+62.50%`  
+**Artifacts:**
+- `ADVANCED/results/advanced_metrics.json`
+- `ADVANCED/trajectories/<case_id>.json` (tool-level steps)
 
-**Expected output:**  
-`advanced success_rate=100.00% (8/8) delta_vs_baseline=+62.50%`  
-Artifacts: `ADVANCED/results/advanced_metrics.json`, `ADVANCED/trajectories/*.json`
+**Runtime:** ~4–8 seconds total  
+**Approx API cost:** **$0** for the primary advanced path (no cloud LLM required)
 
-## Run evaluation / comparison
+## 4) Side-by-side comparison (same cases)
 ```bash
 python BASELINE/fix_once.py
 python ADVANCED/agent.py
-
-# pristine world still red before fixes:
-python sample_world/run_all.py
 ```
 
-**Expected comparison:** baseline **37.5%** vs advanced **100%** on the same 8 cases.
+| Stage | Success rate |
+|-------|----------------|
+| Pristine world | 0% (0/8) |
+| Baseline | 37.5% (3/8) |
+| Advanced | **100% (8/8)** |
 
 ## Data required
-- Synthetic cases under `sample_world/cases/` only (no private data)
+Synthetic only: `sample_world/cases/*/app.py` + `test_app.py`.  
+No private datasets. Work copies are created under `BASELINE/work/` and `ADVANCED/work/` (gitignored).
 
-## Versions & approximate cost
-| Item | Value |
-|------|-------|
-| Runtime (sample world suite) | < 5s typically |
-| Runtime (baseline) | TBD Phase 2 |
-| Runtime (advanced) | TBD Phase 3 |
-| Approx agent / API cost | TBD |
-| Key dependency versions | `pytest` per `sample_world/requirements.txt` |
-
-## Notes
-- Do not commit secrets / API keys
-- Use `.env.example` → `.env` locally only
+## Notes for judges
+- Primary metric = eval-case success rate (full pytest suite green).
+- `meta.json` spoilers are stripped from work copies during agent runs.
+- Do not commit secrets; `.env` is local-only.

@@ -18,6 +18,14 @@ Every meaningful iteration goes here, linked to evidence (tests, metrics, traces
 
 ## Entries
 
+### [2026-08-29] — Phase 4: proof pack ready for submit
+- **From → To:** working agents → judge-ready proof package
+- **Why:** challenge requires repro, write-up story, video, and trajectory evidence
+- **Change:** polished `REPRO.md`, added `docs/WRITEUP.md`, `video/SCRIPT.md`, `docs/TRAJECTORY_AUDIT.md`
+- **Evidence:** `traces/2026-08-29_1530_phase4-proof-pack.md`; audit result PASS
+- **Result:** Phase 4 complete — remaining human steps are record video + HackerEarth upload
+- **Next:** Phase 5 final checklist + Start submission
+
 ### [2026-08-29] — Phase 3: advanced agent 100% (+62.5pp)
 - **From → To:** baseline 37.5% (3/8) → advanced **100% (8/8)**
 - **Why:** need a real plan/edit/verify/retry loop and semantic repair skills
