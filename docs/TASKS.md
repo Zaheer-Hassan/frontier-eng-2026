@@ -13,10 +13,11 @@
 5. [x] Official PDF archived at `docs/problem-statement.pdf`
 
 ## Phase 1 — Sample world (broken apps + eval cases)
-5. [ ] Create or place 1–2 tiny apps with intentional bugs + tests
-6. [ ] Define ≥5–10 eval cases (include 1 hard case)
-7. [ ] Document how to run tests for each case
-8. [ ] Synthetic/public only — no private secrets
+5. [x] Create tiny buggy modules + tests (`sample_world/cases/*`)
+6. [x] Define 8 eval cases (includes hard `08_password_rules`)
+7. [x] Document run commands (`EVAL_CASES.md`, `run_case.py`, `run_all.py`, `REPRO.md`)
+8. [x] Synthetic/public only — no private secrets
+9. [x] Verified pre-agent `success_rate=0.00%` (0/8)
 
 ## Phase 2 — Baseline
 9. [ ] Baseline approach: single prompt OR minimal agent / manual-script equivalent

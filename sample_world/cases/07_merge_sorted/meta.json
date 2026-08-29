@@ -1,0 +1,7 @@
+{
+  "id": "07_merge_sorted",
+  "title": "Merge sorted lists",
+  "difficulty": "medium",
+  "bug_summary": "Returns descending sort of concatenation instead of ascending merge",
+  "hard": false
+}

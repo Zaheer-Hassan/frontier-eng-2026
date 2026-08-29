@@ -1,0 +1,7 @@
+{
+  "id": "06_queue_fifo",
+  "title": "FIFO queue",
+  "difficulty": "medium",
+  "bug_summary": "pop() uses list.pop() from end — behaves as stack/LIFO",
+  "hard": false
+}

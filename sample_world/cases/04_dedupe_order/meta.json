@@ -1,0 +1,7 @@
+{
+  "id": "04_dedupe_order",
+  "title": "Dedupe preserving order",
+  "difficulty": "easy",
+  "bug_summary": "Dedupes via set then sorted(), destroying first-seen order",
+  "hard": false
+}

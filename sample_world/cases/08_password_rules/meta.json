@@ -1,0 +1,7 @@
+{
+  "id": "08_password_rules",
+  "title": "Password policy validator",
+  "difficulty": "hard",
+  "bug_summary": "Symbol rule ignored in return; wrong symbol set; accepts passwords without required symbols",
+  "hard": true
+}

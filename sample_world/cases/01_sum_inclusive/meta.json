@@ -1,0 +1,7 @@
+{
+  "id": "01_sum_inclusive",
+  "title": "Inclusive range sum",
+  "difficulty": "easy",
+  "bug_summary": "Off-by-one: loop uses < high instead of <= high",
+  "hard": false
+}

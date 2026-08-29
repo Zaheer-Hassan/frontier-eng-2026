@@ -1,0 +1,7 @@
+{
+  "id": "03_discount",
+  "title": "Percent discount",
+  "difficulty": "easy",
+  "bug_summary": "Subtracts percent points from price instead of applying percent/100",
+  "hard": false
+}

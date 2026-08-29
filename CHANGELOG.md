@@ -18,6 +18,14 @@ Every meaningful iteration goes here, linked to evidence (tests, metrics, traces
 
 ## Entries
 
+### [2026-08-29] — Phase 1: sample world + 8 eval cases
+- **From → To:** no eval world → 8 failing synthetic cases + harness
+- **Why:** need a fixed case set to measure baseline vs advanced success rate
+- **Change:** added `sample_world/` cases, `run_case.py`, `run_all.py`, EVAL docs; fixed accidental dedupe PASS
+- **Evidence:** `python sample_world/run_all.py` → `success_rate=0.00% (0/8)`; `traces/2026-08-29_1410_phase1-sample-world.md`
+- **Result:** Phase 1 complete — ready for Phase 2 baseline agent
+- **Next:** implement baseline fixer and score on the same 8 cases
+
 ### [2026-08-29] — Phase 0: freeze Problem #2 (bug-fix agent)
 - **From → To:** open problem choice → locked bug-fix / PR agent scope
 - **Why:** need a falsifiable user bottleneck and comparable metric before building sample apps

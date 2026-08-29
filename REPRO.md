@@ -4,55 +4,66 @@ Written for a judge starting from a **clean machine**.
 
 ## Prerequisites
 - OS: macOS / Linux / Windows (WSL OK)
+- Python **3.9+**
 - Git
-- _(fill at kickoff: Python / Node / Docker versions)_
 
 ## Clone
 ```bash
-git clone <YOUR_REPO_URL>
+git clone https://github.com/Zaheer-Hassan/frontier-eng-2026.git
 cd frontier-eng-2026
 ```
 
 ## Environment
 ```bash
-# fill exact commands after stack is chosen
-# example:
-# python -m venv .venv && source .venv/bin/activate
-# pip install -r requirements.txt
+python -m pip install -r sample_world/requirements.txt
+# Later phases may add agent requirements — see BASELINE/ and ADVANCED/ when present
 ```
+
+## Sample world (eval cases)
+```bash
+# all cases — expect ~0% success before agents fix them
+python sample_world/run_all.py
+
+# one case
+python sample_world/run_case.py 01_sum_inclusive
+```
+
+**Expected (Phase 1, unbroken apps):** `success_rate=0%` (8/8 failing).
+
+Case catalog: [`sample_world/EVAL_CASES.md`](./sample_world/EVAL_CASES.md)
 
 ## Run baseline
 ```bash
-# exact commands
+# filled in Phase 2
 ```
 
-**Expected output:** _(describe)_
+**Expected output:** _(Phase 2)_
 
 ## Run advanced
 ```bash
-# exact commands
+# filled in Phase 3
 ```
 
-**Expected output:** _(describe)_
+**Expected output:** _(Phase 3)_
 
-## Run evaluation / tests
+## Run evaluation / comparison
 ```bash
-# exact commands
+# filled when agents exist — same cases for baseline vs advanced
+python sample_world/run_all.py --json
 ```
-
-**Expected output:** _(describe)_
 
 ## Data required
-- _(public / synthetic / starter files from problem PDF)_
+- Synthetic cases under `sample_world/cases/` only (no private data)
 
 ## Versions & approximate cost
 | Item | Value |
 |------|-------|
-| Runtime (baseline) | TBD |
-| Runtime (advanced) | TBD |
+| Runtime (sample world suite) | < 5s typically |
+| Runtime (baseline) | TBD Phase 2 |
+| Runtime (advanced) | TBD Phase 3 |
 | Approx agent / API cost | TBD |
-| Key dependency versions | TBD |
+| Key dependency versions | `pytest` per `sample_world/requirements.txt` |
 
 ## Notes
 - Do not commit secrets / API keys
-- Use `.env.example` only
+- Use `.env.example` → `.env` locally only

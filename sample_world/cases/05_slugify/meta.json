@@ -1,0 +1,7 @@
+{
+  "id": "05_slugify",
+  "title": "URL slugify",
+  "difficulty": "medium",
+  "bug_summary": "Missing lowercase; hyphen normalization incomplete vs tests",
+  "hard": false
+}

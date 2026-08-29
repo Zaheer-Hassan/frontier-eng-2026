@@ -1,0 +1,7 @@
+{
+  "id": "02_word_reverse",
+  "title": "Reverse word order",
+  "difficulty": "easy",
+  "bug_summary": "Reverses characters instead of reversing word tokens",
+  "hard": false
+}
